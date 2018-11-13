@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Rounds';
+	src: url('../fonts/RoundsBlack.eot');
+	src: url('../fonts/RoundsBlack.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoundsBlack.woff2') format('woff2'), url('../fonts/RoundsBlack.woff') format('woff'),
+		url('../fonts/RoundsBlack.ttf') format('truetype'), url('../fonts/RoundsBlack.svg#RoundsBlack') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Plainot';
+	src: url('../fonts/Plainot.eot');
+	src: url('../fonts/Plainot.eot?#iefix') format('embedded-opentype'), url('../fonts/Plainot.woff2') format('woff2'),
+		url('../fonts/Plainot.woff') format('woff'), url('../fonts/Plainot.ttf') format('truetype'),
+		url('../fonts/Plainot.svg#Plainot') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

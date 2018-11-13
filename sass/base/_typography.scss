@@ -1,0 +1,60 @@
+body {
+	font-family: 'Plainot', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	// color: $color-grey-dark;
+}
+
+.heading {
+	font: {
+		family: 'Rounds';
+		size: 6rem;
+	}
+	text-align: center;
+
+	& span {
+		background: url(../img/border-gray.png);
+	}
+}
+
+.heading-secondary {
+	display: inline-block;
+
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	-webkit-background-clip: text;
+	color: transparent;
+
+	transition: .2s;
+
+	@include respond(tab-port) {
+		font-size: 3rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2.5rem;
+	}
+
+	&:hover {
+		transform: skewX(10deg) skewY(.2deg) scale(1.02);
+		text-shadow: .5rem 1rem 1rem rgba($color-black, .3);
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
