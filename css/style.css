@@ -47,6 +47,9 @@ body {
   padding-top: 100px;
   overflow-x: hidden; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Plainot', sans-serif;
   font-weight: 400;
@@ -57,6 +60,9 @@ body {
   font-size: 6rem;
   text-align: center;
   margin-bottom: 4rem; }
+  @media (max-width: 1200px) {
+    .heading {
+      font-size: 4rem; } }
   .heading span {
     background: url(../img/border-gray.png) no-repeat;
     background-position: 50%;
@@ -131,7 +137,8 @@ body {
   border: none;
   border-radius: 1rem;
   cursor: pointer;
-  color: #000; }
+  color: #000;
+  margin-bottom: 2rem; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -150,16 +157,32 @@ body {
 
 .main-footer {
   color: #fff;
-  background-color: #000;
+  background-color: #131313;
   padding: 2rem 0;
-  font-size: 1.4rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
-  .main-footer-wrap {
-    min-width: 1024px;
-    max-width: 1200px;
-    margin: 0 auto; }
+  font-size: 2.4rem; }
+  @media screen and (max-width: 1199px) {
+    .main-footer {
+      text-align: center; } }
+  .main-footer .col-md-6 {
+    padding: 0; }
+  .main-footer .col-md-4 {
+    margin-bottom: 2rem; }
+  .main-footer .contacts-wrap .col-md-4 {
+    margin-bottom: 0; }
+  .main-footer h3 {
+    color: #d52322; }
+  .main-footer a {
+    color: #fff; }
+  .main-footer img {
+    height: 3rem;
+    width: auto;
+    padding: 0 1.5rem; }
+    .main-footer img.youtube {
+      height: auto; }
+  .main-footer .copyright .col-md-6 {
+    padding: 0 15px; }
+  .main-footer .copyright h3 {
+    color: #fff; }
 
 .main-header {
   height: 100px;
@@ -176,13 +199,16 @@ body {
     @media (min-width: 1200px) {
       .navbar-collapse {
         max-height: 100px !important; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .navbar-nav {
       transform: translateY(50%); } }
   .navbar-nav li a {
     font-family: 'Rounds';
     font-size: 1.8rem;
     color: #fff; }
+    @media (max-width: 1199px) {
+      .navbar-nav li a {
+        font-size: 1rem; } }
   .navbar-nav li.active a,
   .navbar-nav li a:hover,
   .navbar-nav li a:active {
@@ -224,6 +250,7 @@ body {
       height: 3rem;
       position: absolute;
       bottom: 0;
+      left: 0;
       background-image: url(../img/border.png);
       background-size: cover; }
   .about-list {
@@ -236,6 +263,10 @@ body {
         position: absolute;
         left: 0;
         color: #ed491c; }
+  @media screen and (max-width: 1199px) {
+    .about .pull-right {
+      float: none;
+      width: 100%; } }
 
 .products {
   margin-bottom: 4rem; }
@@ -248,6 +279,7 @@ body {
       height: 3rem;
       position: absolute;
       bottom: 0;
+      left: 0;
       background-image: url(../img/border.png);
       background-size: cover; }
   .products .col-md-4,
@@ -271,6 +303,11 @@ body {
       .products .col-md-3 a img {
         filter: grayscale(10);
         transition: .3s; }
+        @media screen and (max-width: 1199px) {
+          .products .col-md-4 a img,
+          .products .col-md-3 a img {
+            display: block;
+            margin: 0 auto; } }
       .products .col-md-4 a:hover,
       .products .col-md-3 a:hover {
         text-decoration: none; }
@@ -289,10 +326,13 @@ body {
       height: 3rem;
       position: absolute;
       bottom: 0;
+      left: 0;
       background-image: url(../img/border.png);
       background-size: cover; }
   .reviews .carousel {
     margin-bottom: 4rem; }
+    .reviews .carousel img {
+      height: max-content; }
     .reviews .carousel-caption {
       color: #000;
       text-shadow: none; }
@@ -313,6 +353,7 @@ body {
       height: 3rem;
       position: absolute;
       bottom: 0;
+      left: 0;
       background-image: url(../img/border.png);
       background-size: cover; }
   .qa .panel-group .panel {
@@ -338,3 +379,32 @@ body {
       display: block;
       color: #52ac62;
       font-size: 2.4rem; }
+
+.partners {
+  margin-bottom: 4rem; }
+  .partners .container {
+    padding-bottom: 7rem;
+    position: relative; }
+    .partners .container::before {
+      content: '';
+      width: 100%;
+      height: 3rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url(../img/border.png);
+      background-size: cover; }
+
+.contacts {
+  margin-bottom: 6rem; }
+  .contacts h3 {
+    color: #ed491c;
+    margin-bottom: 2rem; }
+  .contacts .form-control {
+    margin-bottom: 2rem;
+    resize: none;
+    border-radius: 1rem;
+    font-size: 2rem; }
+  .contacts .btn {
+    display: block;
+    margin: 0 auto; }
