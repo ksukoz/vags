@@ -11,9 +11,15 @@ body {
 		size: 6rem;
 	}
 	text-align: center;
+	margin-bottom: 4rem;
 
 	& span {
-		background: url(../img/border-gray.png);
+		background: url(../img/border-gray.png) no-repeat;
+		background-position: 50%;
+		background-size: cover;
+
+		padding: 0 2rem;
+		color: $color-primary;
 	}
 }
 

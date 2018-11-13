@@ -1,4 +1,5 @@
 .main {
+	margin-bottom: 4rem;
 	& .carousel {
 		max-height: calc(100vh - 100px);
 
@@ -32,634 +33,76 @@
 	}
 }
 
-.home {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	background: $color-grey-light-2;
-
-	&-main-wrap {
-		position: relative;
-
-		height: 100vh;
-		animation-name: moveInRight;
-		animation-duration: 1s;
-		animation-timing-function: ease-out;
-		backface-visibility: hidden;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-		}
-
-		&::before {
-			width: 55%;
-			height: 100%;
-			background: {
-				image: url('../img/main--gepart.png');
-				position: 99%;
-				size: cover;
-			}
-		}
-
-		&::after {
-			bottom: 0;
-			right: 0;
-			width: 30%;
-			height: 20%;
-			background: {
-				image: url('../img/main--dots.png');
-				size: cover;
-			}
-		}
-	}
-	&-main {
-		&-container {
-			@include container;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			align-items: flex-end;
-			height: 65vh;
-			margin-top: 13vh;
-
-			@include respond(big-desktop) {
-				margin-top: 10vh;
-			}
-		}
-
-		&-title {
-			position: relative;
-			padding: 12rem 0;
-			font: {
-				family: 'Intro';
-				size: 2.5rem;
-			}
-			line-height: 1;
-			text-transform: uppercase;
-			color: $color-grey-dark;
-			writing-mode: vertical-rl;
-			transform: rotate(180deg);
-
-			@include respond(big-desktop) {
-				padding: 13rem 0;
-				font-size: 4.5rem;
-			}
-
-			&::before {
-				content: '\25B2\25B2\25B2';
-				position: absolute;
-				bottom: -1.5rem;
-				right: .5rem;
-				font-size: 5rem;
-				letter-spacing: -15px;
-
-				@include respond(big-desktop) {
-					bottom: -1.5rem;
-					right: 3rem;
-				}
-			}
-		}
-
-		&-dots {
-			position: absolute;
-			left: -0.5rem;
-			top: -0.5rem;
-			letter-spacing: -15px;
-			font-size: 4rem;
-
-			&--orange {
-				color: $color-secondary;
-			}
-		}
-
-		&-text {
-			position: relative;
-
-			text: {
-				align: right;
-				transform: lowercase;
-			}
-			padding-right: 1rem;
-			font: {
-				family: 'Avanti';
-				size: 3rem;
-			}
-			line-height: 1;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 4.3rem;
-				left: calc(7rem - 270px);
-				width: 270px;
-				height: 10px;
-				background-color: $color-black;
-			}
-		}
-	}
-}
-
 .about {
-	background: {
-		image: url('../img/about--bg.png');
-		position: 0 0;
-		size: cover;
-	}
-	width: 100vw;
-	height: 100vh;
+	font-size: 2rem;
+	margin-bottom: 4rem;
 
-	&-wrap {
-		@include container;
-
-		display: flex;
-		justify-content: space-between;
-		height: 100%;
-		padding-top: calc(100px + 5rem);
-
-		&.animate {
-			animation-name: moveInLeft;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
-	}
-
-	&-img-wrap {
+	.container {
+		padding-bottom: 7rem;
 		position: relative;
-		width: 54%;
-		height: 95%;
-		padding-top: 4rem;
-	}
-
-	&-img--gepard {
-		position: relative;
-		display: block;
-		height: 100%;
-		text-align: center;
-
-		& img {
-			max-height: 100%;
-			max-width: 100%;
-			text-align: center;
-		}
-	}
-
-	&-text-wrap {
-		position: relative;
-		width: 46%;
-		height: 90%;
-		border: 25px solid #fff;
-		border-image: url('../img/about-border.png') 30 round round;
 
 		&::before {
-			content: 'О нас';
+			content: '';
+			width: 100%;
+			height: 3rem;
 			position: absolute;
-			left: -50%;
-			top: -3rem;
-			width: 150%;
-			font: {
-				family: 'Intro';
-				size: 17rem;
-			}
-			text-transform: uppercase;
-			line-height: 0;
-			opacity: 0.1;
+			bottom: 0;
+			background-image: url(../img/border.png);
+			background-size: cover;
 		}
 	}
 
-	&-title {
-		font: {
-			family: 'Intro';
-			size: 4rem;
-		}
-		margin-top: 0;
-		margin-bottom: 3rem;
-		line-height: 1;
+	&-list {
+		list-style: none;
 
-		@include respond(big-desktop) {
-			font-size: 6rem;
-		}
-	}
+		&__item {
+			position: relative;
+			padding-left: 3rem;
 
-	&-text {
-		font: {
-			family: 'Avanti';
-			size: 2rem;
-		}
-		line-height: 1;
-
-		@include respond(big-desktop) {
-			font-size: 3rem;
-		}
-
-		&--marked {
-			font-size: 3rem;
-			line-height: .8;
-
-			@include respond(big-desktop) {
-				font-size: 4rem;
+			&::before {
+				content: '\25b6';
+				position: absolute;
+				left: 0;
+				color: $color-primary-dark;
 			}
 		}
-	}
-
-	&-typography {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 85%;
 	}
 }
 
-.design {
-	background: {
-		image: url('../img/design--bg.png');
-		position: 50%;
-		size: cover;
-	}
-	width: 100vw;
-	height: 100vh;
+.products {
+	margin-bottom: 4rem;
 
-	&-wrap {
-		@include container;
-		padding: 0 15%;
-		padding-top: 8%;
-		&.animate {
-			animation-name: moveInRight;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
+	& .col-md-4,
+	& .col-md-3 {
+		padding: 0;
+		margin-bottom: 4rem;
 
-		@include respond(tab-land) {
-			padding: 0 13%;
-			padding-top: 20%;
-		}
+		& a {
+			color: $color-black;
 
-		@include respond(big-desktop) {
-			padding: 0 5%;
-			padding-top: 15%;
-		}
+			& h3 span {
+				position: relative;
+				padding-left: 3rem;
 
-		p {
-			font: {
-				family: 'Avanti';
-				size: 3rem;
-			}
-			line-height: 1;
-
-			@include respond(big-desktop) {
-				font-size: 4rem;
-			}
-		}
-
-		h3 {
-			font: {
-				family: 'Avanti';
-				size: 3rem;
-			}
-			background-color: #eb6ca9;
-			width: max-content;
-			padding: 0 1rem;
-			text-transform: uppercase;
-			color: $color-white;
-
-			@include respond(big-desktop) {
-				font-size: 4rem;
-			}
-		}
-
-		h4 {
-			font: {
-				family: 'Avanti';
-				size: 2rem;
-				weight: normal;
-			}
-			margin-top: 12rem;
-			padding: 0 5rem;
-			border-top: 2px solid $color-white;
-			width: max-content;
-
-			@include respond(tab-land) {
-				margin-top: 3rem;
-			}
-
-			@include respond(big-desktop) {
-				margin-left: 5rem;
-				margin-top: 15rem;
-				font-size: 3rem;
-			}
-		}
-
-		h5 {
-			font: {
-				size: 1rem;
-				family: 'Intro';
-			}
-			text-align: center;
-			line-height: 1;
-
-			@include respond(big-desktop) {
-				font-size: 2rem;
-			}
-
-			&img {
-				vertical-align: bottom;
-
-				@include respond(big-desktop) {
-					vertical-align: sub;
+				&::before {
+					content: '\25b6';
+					position: absolute;
+					left: 0;
+					color: $color-primary-dark;
 				}
 			}
 
-			& span {
-				color: #eb6ca9;
-			}
-		}
-	}
-
-	&-bordered {
-		width: max-content;
-		padding: 2rem;
-		border: 4px solid #0096c2;
-	}
-
-	&-title {
-		font: {
-			size: 4rem;
-			family: 'Intro';
-		}
-		color: #024e82;
-
-		@include respond(big-desktop) {
-			font-size: 6rem;
-		}
-	}
-
-	&-list {
-		list-style: none;
-		font: {
-			family: 'Avanti';
-			size: 2rem;
-		}
-		line-height: 1;
-
-		@include respond(big-desktop) {
-			font-size: 3rem;
-		}
-	}
-}
-
-.polygraphy {
-	background: {
-		image: url('../img/polygraphy--bg.png');
-		position: 50%;
-		size: cover;
-	}
-
-	&-wrap {
-		background: {
-			image: url('../img/polygraphy.png');
-			position: 50%;
-			size: cover;
-		}
-		width: 100vw;
-		height: 100vh;
-
-		&.animate {
-			animation-name: moveInLeft;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
-	}
-}
-
-.video {
-	background: {
-		image: url('../img/video--bg.png');
-		position: 50%;
-		size: cover;
-	}
-	width: 100vw;
-	height: 100vh;
-
-	&-wrap {
-		@include container;
-		padding-top: 150px;
-		&.animate {
-			animation-name: moveInRight;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
-	}
-
-	&-right {
-		width: 40%;
-		height: 70vh;
-		margin-left: auto;
-		border: 10px solid #fff200;
-	}
-
-	&-title {
-		background-color: #fff200;
-		color: transparent;
-		text: {
-			align: center;
-			transform: uppercase;
-		}
-
-		span {
-			font: {
-				family: 'Intro';
-				size: 6rem;
-			}
-			color: #231f20;
-
-			@include respond(big-desktop) {
-				font-size: 9rem;
-			}
-		}
-	}
-
-	&-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 65%;
-	}
-
-	&-list {
-		padding: 3rem;
-		list-style: none;
-		color: $color-white;
-	}
-
-	&-item {
-		font: {
-			family: 'Avanti';
-			size: 2rem;
-		}
-		line-height: 1;
-
-		@include respond(big-desktop) {
-			font-size: 3rem;
-		}
-	}
-
-	&-link-wrap {
-		text-align: center;
-		font: {
-			family: 'Avanti';
-			size: 2rem;
-		}
-		color: $color-white;
-
-		@include respond(big-desktop) {
-			font-size: 3rem;
-		}
-	}
-}
-
-.web {
-	background: {
-		image: url('../img/web--bg.png');
-		position: 50%;
-		size: cover;
-	}
-	width: 100vw;
-	height: 100vh;
-
-	&-wrap {
-		@include container;
-		padding-top: 100px;
-
-		&.animate {
-			animation-name: moveInLeft;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
-	}
-
-	&-right {
-		display: flex;
-		flex-direction: column;
-		width: 30%;
-		margin-left: auto;
-	}
-
-	&-title {
-		font: {
-			family: 'Pixel Cyr';
-			size: 6rem;
-		}
-
-		@include respond(big-desktop) {
-			font-size: 8rem;
-		}
-	}
-
-	&-list {
-		list-style: none;
-		color: #6a400e;
-		margin-bottom: 3rem;
-	}
-
-	&-item {
-		font: {
-			family: 'Pixel Cyr';
-			size: 2rem;
-		}
-		line-height: 1.5;
-
-		@include respond(big-desktop) {
-			font-size: 3rem;
-		}
-	}
-}
-
-.contacts {
-	background: #000082;
-	width: 100vw;
-	height: 100vh;
-
-	&-wrap {
-		&.animate {
-			animation-name: moveInRight;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
-		}
-	}
-
-	&-content {
-		@include container;
-		display: flex;
-		flex-direction: column;
-		padding-top: 110px;
-
-		.btn {
-			align-self: center;
-		}
-	}
-
-	&-list {
-		text-align: right;
-		align-self: flex-end;
-		list-style: none;
-		z-index: 3;
-	}
-
-	&-item {
-		a {
-			color: $color-white;
-			font: {
-				family: 'Perfect DOS VGA 437 Win';
-				size: 1.5rem;
-			}
-			text-decoration: none;
-
-			@include respond(big-desktop) {
-				font-size: 2rem;
-			}
-		}
-	}
-
-	&-form {
-		display: flex;
-		flex-direction: column;
-		width: 70%;
-
-		align-self: center;
-
-		label {
-			color: $color-white;
-			font: {
-				family: 'Perfect DOS VGA 437 Win';
-				size: 1.5rem;
+			img {
+				filter: grayscale(10);
+				transition: .3s;
 			}
 
-			@include respond(big-desktop) {
-				font-size: 2rem;
+			&:hover {
+				text-decoration: none;
+				img {
+					filter: grayscale(0);
+				}
 			}
-		}
-
-		& input,
-		& textarea {
-			margin-bottom: .5rem;
-			padding: .5rem;
-			resize: none;
-
-			@include respond(big-desktop) {
-				margin-bottom: 1rem;
-				padding: 1rem;
-			}
-		}
-
-		.btn {
-			align-self: flex-end;
 		}
 	}
 }
