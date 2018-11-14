@@ -42,4 +42,21 @@
 	&.btn--secondary {
 		background-color: $color-secondary;
 	}
+
+	&.btn--transparent {
+		background-color: transparent;
+		border: 1px solid $color-primary;
+	}
+
+	&.btn--large {
+		width: 100%;
+	}
+
+	&--number {
+		width: 40px;
+		height: 40px;
+		font-weight: bold;
+		background-color: transparent;
+		border: 1px solid rgba($color-black, 0.2);
+	}
 }

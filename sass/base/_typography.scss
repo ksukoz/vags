@@ -27,6 +27,19 @@ body {
 	}
 }
 
+.heading-primary {
+	color: $color-primary;
+	font: {
+		family: 'Rounds';
+		size: 2.4rem;
+	}
+	margin-bottom: 4rem;
+
+	& img {
+		height: 10rem;
+	}
+}
+
 .heading-secondary {
 	color: $color-secondary;
 	font-size: 3rem;
