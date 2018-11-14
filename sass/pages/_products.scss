@@ -1,0 +1,31 @@
+.side-nav {
+	position: fixed;
+	background-color: $color-primary;
+	width: 260px;
+	padding: 2rem 0;
+
+	& .list-group-item {
+		position: relative;
+		background-color: $color-primary;
+		border: none;
+		color: $color-black;
+		padding-left: 5rem;
+		font: {
+			size: 2rem;
+			weight: bold;
+		}
+
+		&::before {
+			content: '\25b6';
+			position: absolute;
+			left: 2rem;
+			color: $color-primary-dark;
+		}
+
+		&.active,
+		&:hover {
+			background-color: rgba($color-white, .5);
+			color: $color-black;
+		}
+	}
+}

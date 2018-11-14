@@ -445,3 +445,25 @@ body {
     transform: translateY(1rem); }
   .reviews-form .radio-wrap {
     margin-bottom: 4rem; }
+
+.side-nav {
+  position: fixed;
+  background-color: #fdc107;
+  width: 260px;
+  padding: 2rem 0; }
+  .side-nav .list-group-item {
+    position: relative;
+    background-color: #fdc107;
+    border: none;
+    color: #000;
+    padding-left: 5rem;
+    font-size: 2rem;
+    font-weight: bold; }
+    .side-nav .list-group-item::before {
+      content: '\25b6';
+      position: absolute;
+      left: 2rem;
+      color: #ed491c; }
+    .side-nav .list-group-item.active, .side-nav .list-group-item:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #000; }
