@@ -1,0 +1,85 @@
+.reviews {
+	&-all {
+		.heading {
+			margin: 6rem 0;
+		}
+
+		.reviews-wrap {
+			margin-bottom: 4rem;
+		}
+
+		.media {
+			border-bottom: 1px solid rgba($color-black, 0.3);
+			padding-bottom: 2rem;
+
+			&-left {
+				padding-right: 5rem;
+			}
+
+			&-body {
+				font-size: 2.4rem;
+			}
+		}
+
+		.pagination {
+			li {
+				display: inline-block;
+				margin: 0 1.5rem;
+
+				span {
+					border-radius: 2px;
+					width: 4rem;
+					height: 4rem;
+					padding-top: 1rem;
+					text-align: center;
+					color: $color-black;
+					font-weight: bold;
+				}
+
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&.active {
+					span {
+						background-color: $color-primary;
+						border: none;
+					}
+				}
+			}
+		}
+	}
+
+	&-form {
+		margin-bottom: 6rem;
+
+		& .form-control {
+			margin-bottom: 2rem;
+			resize: none;
+			border-radius: 1rem;
+			font-size: 2rem;
+			height: auto;
+			padding: 1rem 2rem;
+		}
+
+		& .btn {
+			display: block;
+			margin: 0 auto;
+		}
+
+		& img {
+			transition: .3s;
+		}
+
+		& input:checked + img {
+			transform: translateY(1rem);
+		}
+
+		.radio-wrap {
+			margin-bottom: 4rem;
+		}
+	}
+}

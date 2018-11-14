@@ -71,24 +71,9 @@ body {
     color: #fdc107; }
 
 .heading-secondary {
-  display: inline-block;
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  background-image: linear-gradient(to right, #7ed56f, #ed491c);
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: .2s; }
-  @media (max-width: 56.25em) {
-    .heading-secondary {
-      font-size: 3rem; } }
-  @media (max-width: 37.5em) {
-    .heading-secondary {
-      font-size: 2.5rem; } }
-  .heading-secondary:hover {
-    transform: skewX(10deg) skewY(0.2deg) scale(1.02);
-    text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+  color: #52ac62;
+  font-size: 3rem;
+  margin-bottom: 4rem; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -408,3 +393,55 @@ body {
   .contacts .btn {
     display: block;
     margin: 0 auto; }
+
+.reviews-all .heading {
+  margin: 6rem 0; }
+
+.reviews-all .reviews-wrap {
+  margin-bottom: 4rem; }
+
+.reviews-all .media {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 2rem; }
+  .reviews-all .media-left {
+    padding-right: 5rem; }
+  .reviews-all .media-body {
+    font-size: 2.4rem; }
+
+.reviews-all .pagination li {
+  display: inline-block;
+  margin: 0 1.5rem; }
+  .reviews-all .pagination li span {
+    border-radius: 2px;
+    width: 4rem;
+    height: 4rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #000;
+    font-weight: bold; }
+  .reviews-all .pagination li:first-child {
+    margin-left: 0; }
+  .reviews-all .pagination li:last-child {
+    margin-right: 0; }
+  .reviews-all .pagination li.active span {
+    background-color: #fdc107;
+    border: none; }
+
+.reviews-form {
+  margin-bottom: 6rem; }
+  .reviews-form .form-control {
+    margin-bottom: 2rem;
+    resize: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    height: auto;
+    padding: 1rem 2rem; }
+  .reviews-form .btn {
+    display: block;
+    margin: 0 auto; }
+  .reviews-form img {
+    transition: .3s; }
+  .reviews-form input:checked + img {
+    transform: translateY(1rem); }
+  .reviews-form .radio-wrap {
+    margin-bottom: 4rem; }
