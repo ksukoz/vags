@@ -40,3 +40,54 @@
 		}
 	}
 }
+
+.side-pills {
+	position: fixed;
+	top: 120px;
+	right: -10px;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	z-index: 1000;
+
+	&__img {
+		height: 25px;
+		margin-bottom: 1rem;
+		vertical-align: text-top;
+
+		&--basket {
+			transform: rotate(90deg);
+		}
+		&--contacts {
+			transform: rotate(180deg);
+		}
+	}
+
+	.side-pill {
+		margin-bottom: 15px;
+		a {
+			font: {
+				family: 'Rounds';
+				size: 2rem;
+			}
+			line-height: 1;
+			color: $color-white;
+		}
+
+		span {
+			vertical-align: text-top;
+			font-family: 'Plainot';
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: $color-white;
+			color: $color-black;
+		}
+
+		&--orange {
+			background-color: $color-primary;
+		}
+		&--red {
+			background-color: $color-primary-dark;
+		}
+	}
+}

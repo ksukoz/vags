@@ -10,7 +10,7 @@
     <link href="/css/fonts.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body data-spy="scroll" id='body'>
         <nav class="navbar main-header navbar-fixed-top">
                 <div class="container">
                   <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,6 +41,10 @@
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
               </nav>
+              <ul class="nav nav-pills side-pills" role="tablist">
+                    <li role="presentation" class='side-pill side-pill--red'><a href="#"><img class='side-pills__img side-pills__img--contacts' src="/img/contacts.png" alt=""> Обратная связь</a></li>
+                      <li role="presentation" class='side-pill side-pill--orange'><a href="/products.html#basket"><img class='side-pills__img side-pills__img--basket' src="/img/basket.png" alt=""> Корзина <span class="badge">42</span></a></li>
+                    </ul>
 
     <main>
         <section class="reviews-all">
@@ -148,7 +152,8 @@
     </main>
     
     <footer class="main-footer">
-        <div class="container">
+        <div class="container main-footer__wrap">
+                <a href="#body" class='footer-top'><img src="/img/arrow--top.png" alt=""></a>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Телефоны:</h3>
